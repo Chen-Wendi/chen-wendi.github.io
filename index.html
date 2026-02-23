@@ -65,6 +65,7 @@
               <h2>News</h2>
               <ul>
                 <li><span style="color: gray">[Feb. 2026]</span> We have released the <a href="https://github.com/Chen-Wendi/ImplicitRDP">code</a> of <a href="https://implicit-rdp.github.io"><strong>ImplicitRDP</strong></a>.</li>
+                <li><span style="color: gray">[Feb. 2026]</span> One paper (Rethinking Camera Choice) is accepted to CVPR 2026! 🎉</li>
                 <li><span style="color: gray">[Jan. 2026]</span> Two papers (<a href="https://ericjin2002.github.io/SOE"><strong>SOE</strong></a> and <a href="https://right-side-out.github.io"><strong>Right-Side-Out</strong></a>) are accepted to ICRA 2026!  🎉</li>
                 <li><span style="color: gray">[Dec. 2025]</span> We propose <a href="https://implicit-rdp.github.io/"><strong>ImplicitRDP</strong></a>, an end-to-end version of <a href="https://reactive-diffusion-policy.github.io"><strong>RDP</strong></a> with a streamlined training pipeline.</li>
                 <li><span style="color: gray">[Jun. 2025]</span> <a href="https://reactive-diffusion-policy.github.io"><strong>Reactive Diffusion Policy</strong></a> is selected as a finalist for <strong style="color: red;">Best Student Paper</strong> at RSS 2025! 🔥</li>
@@ -153,6 +154,56 @@
             </td>
           </tr>
           
+          <!-- Rethinking Camera Choice -->
+          <tr>
+            <td style="padding:16px;width:25%;vertical-align:middle">
+              <div>
+                <div class="clickable" id="Rethinking-Camera-Choice-scene-generalization-container">
+                  <img src='images/Rethinking_Camera_Choice_Scene_Generalization.png' alt="Rethinking Camera Choice Scene Generalization" width="160">
+                  <div class="overlay-text">click to view the research questions</div>
+                </div>
+                <div class="fullscreen-container" id="Rethinking-Camera-Choice-research-questions-container">
+                  <img src='images/Rethinking_Camera_Choice_Research_Questions.png' alt="Rethinking Camera Choice Research Questions" width="100%">
+                </div>
+              <script type="text/javascript">
+                rethinking_camera_choice_scene_generalization = document.getElementById('Rethinking-Camera-Choice-scene-generalization-container');
+                rethinking_camera_choice_research_questions = document.getElementById('Rethinking-Camera-Choice-research-questions-container');
+                rethinking_camera_choice_scene_generalization.addEventListener('click', function() {
+                  rethinking_camera_choice_research_questions.style.display = 'flex';
+                  rethinking_camera_choice_research_questions.offsetHeight; // trigger reflow
+                  rethinking_camera_choice_research_questions.classList.add('active');
+                });
+                rethinking_camera_choice_research_questions.addEventListener('click', function() {
+                  rethinking_camera_choice_research_questions.classList.remove('active');
+                  rethinking_camera_choice_research_questions.addEventListener('transitionend', function() {
+                    rethinking_camera_choice_research_questions.style.display = 'none';
+                  }, { once: true });
+                });
+              </script>
+            </td>
+            <td style="padding:8px;width:75%;vertical-align:middle">
+              <span class="papertitle">Rethinking Camera Choice: An Empirical Study on Fisheye Camera Properties in Robotic Manipulation</span>
+              <br>
+              <a href="https://hanxue.me">Han Xue</a><sup>*</sup>,
+              <a href="https://apiecehann.github.io">Min Nan</a><sup>*</sup>,
+              Xiaotong Liu<sup>*</sup>,
+              <strong>Wendi Chen</strong>,
+              Yuan Fang,
+              <a href="https://lyuj1998.github.io">Jun Lv</a>,
+              <a href="https://www.mvig.org">Cewu Lu</a><sup>\( \dagger \)</sup>,
+              <a href="https://alvinwen428.github.io">Chuan Wen</a><sup>\( \dagger \)</sup>
+              (<sup>*</sup>equal contributions, <sup>\( \dagger \)</sup>equal advising)
+              <br>
+              <em>Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>)</em>, 2026
+              <p></p>
+              <p>
+                This paper presents the first comprehensive empirical study on the properties of wrist-mounted fisheye cameras in robotic imitation learning. 
+                Simulation and real-world results reveal that the fisheye camera can improve spatial localization in visually complex environments and scene generalization when trained with diverse data. 
+                We also propose a Random Scale Augmentation (RSA) strategy to mitigate the cross-camera transfer challenges of fisheye cameras.
+              </p>
+            </td>
+          </tr>
+
           <!-- SOE -->
           <tr>
             <td style="padding:16px;width:25%;vertical-align:middle">
