@@ -64,6 +64,8 @@
             <td style="padding:16px;width:100%;vertical-align:middle">
               <h2>News</h2>
               <ul>
+                <li><span style="color: gray">[Jun. 2026]</span> <a href="https://implicit-rdp.github.io/"><strong>ImplicitRDP</strong></a> is accepted to RA-L 2026 and receives the <strong style="color: red;">Outstanding Paper Award</strong> at the <a href="https://sense-of-space.github.io">SoS Workshop</a> at CVPR 2026! 🎉🔥</li>
+                <li><span style="color: gray">[Mar. 2026]</span> We propose <a href="https://plan-lab.github.io/projects/vtam/"><strong>VTAM</strong></a>, which brings tactile perception into video action models for contact-rich manipulation.</li>
                 <li><span style="color: gray">[Mar. 2026]</span> We propose <a href="https://robo-pocket.github.io"><strong>RoboPocket</strong></a>, a system that realizes robot-free instant policy iteration in the wild.</li>
                 <li><span style="color: gray">[Feb. 2026]</span> We have released the <a href="https://github.com/Chen-Wendi/ImplicitRDP">code</a> of <a href="https://implicit-rdp.github.io"><strong>ImplicitRDP</strong></a>.</li>
                 <li><span style="color: gray">[Feb. 2026]</span> One paper (<a href="https://robo-fisheye.github.io"><strong>Rethinking Camera Choice</strong></a>) is accepted to CVPR 2026! 🎉</li>
@@ -92,6 +94,139 @@
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
+          <!-- FTP-1 -->
+          <tr>
+            <td style="padding:16px;width:25%;vertical-align:middle">
+              <div>
+                <div class="clickable" id="FTP-1-gif-container">
+                  <img src='images/FTP-1.gif' alt="GIF of FTP-1 Demos" width="160">
+                  <div class="overlay-text">click to view the proposed framework</div>
+                </div>
+                <div class="fullscreen-container" id="FTP-1-framework-container">
+                  <img src='images/FTP-1.png' alt="FTP-1 Framework" width="100%">
+                </div>
+              <script type="text/javascript">
+                ftp_1_gif = document.getElementById('FTP-1-gif-container');
+                ftp_1_framework = document.getElementById('FTP-1-framework-container');
+                ftp_1_gif.addEventListener('click', function() {
+                  ftp_1_framework.style.display = 'flex';
+                  ftp_1_framework.offsetHeight; // trigger reflow
+                  ftp_1_framework.classList.add('active');
+                });
+                ftp_1_framework.addEventListener('click', function() {
+                  ftp_1_framework.classList.remove('active');
+                  ftp_1_framework.addEventListener('transitionend', function() {
+                    ftp_1_framework.style.display = 'none';
+                  }, { once: true });
+                });
+              </script>
+            </td>
+            <td style="padding:8px;width:75%;vertical-align:middle">
+              <a href="https://ftp1-policy.github.io">
+              <span class="papertitle">FTP-1: A Generalist Foundation Tactile Policy Across Tactile Sensors for Contact-Rich Manipulation</span>
+              </a>
+              <br>
+              <a href="https://michaelyuancb.github.io">Chengbo Yuan</a><sup>*</sup>,
+              <a href="https://victkk.github.io">Zicheng Zhang</a><sup>*</sup>,
+              <a href="https://openreview.net/profile?id=%7EMingjie_Zhou2">Mingjie Zhou</a><sup>*</sup>,
+              <strong>Wendi Chen</strong>,
+              <a href="https://openreview.net/profile?id=~Yi_Wang115">Yi Wang</a>,
+              <a href="https://zhuoyang-liu.github.io">Zhuoyang Liu</a>,
+              <a href="https://dantong88.github.io">Dantong Niu</a>,
+              <a href="https://scholar.google.com/citations?user=IZB5CEMAAAAJ&hl=zh-CN">Shuo Wang</a>,
+              <a href="https://zdchan.github.io">Hui Zhang</a>,
+              <a href="https://mr-zwkid.github.io">Wenkang Zhang</a>,
+              <a href="https://yingdong-hu.github.io">Yingdong Hu</a>,
+              <a href="https://ieeexplore.ieee.org/author/37089953645">Yuanqing Gong</a>,
+              <a href="https://wlxing1901.github.io">Wanli Xing</a>,
+              <a href="https://alvinwen428.github.io">Chuan Wen</a>,
+              <a href="https://www.mvig.org">Cewu Lu</a>,
+              <a href="https://openreview.net/profile?id=~Kaifeng_Zhang1">Kaifeng Zhang</a>,
+              <a href="https://people.iiis.tsinghua.edu.cn/~gaoyang/yang-gao.weebly.com/index.html">Yang Gao</a>
+              (<sup>*</sup>equal contributions)
+              <br>
+              <em>arXiv preprint</em>, 2026
+              <br>
+              <a href="https://ftp1-policy.github.io">project page</a>
+              /
+              <a href="https://arxiv.org/pdf/2606.13102">paper</a>
+              /
+              <a href="https://arxiv.org/abs/2606.13102">arXiv</a>
+              /
+              <a href="data/bibtex/FTP-1.bib">bibtex</a>
+              <p></p>
+              <p>
+                FTP-1 is a generalist foundation tactile policy pretrained on large-scale heterogeneous tactile manipulation data across diverse sensors and embodiments.
+                By unifying image-, array-, and state-based tactile inputs into a morphology-aware tactile token space, FTP-1 enables transferable tactile skills and improves contact-rich manipulation on both seen and unseen tactile sensor setups.
+              </p>
+            </td>
+          </tr>
+
+          <!-- VTAM -->
+          <tr bgcolor="#ffffd0">
+            <td style="padding:16px;width:25%;vertical-align:middle">
+              <div>
+                <div class="clickable" id="VTAM-gif-container">
+                  <img src='images/VTAM.gif' alt="GIF of VTAM Demos" width="160">
+                  <div class="overlay-text">click to view the proposed framework</div>
+                </div>
+                <div class="fullscreen-container" id="VTAM-framework-container">
+                  <img src='images/VTAM.png' alt="VTAM Framework" width="100%">
+                </div>
+              <script type="text/javascript">
+                vtam_gif = document.getElementById('VTAM-gif-container');
+                vtam_framework = document.getElementById('VTAM-framework-container');
+                vtam_gif.addEventListener('click', function() {
+                  vtam_framework.style.display = 'flex';
+                  vtam_framework.offsetHeight; // trigger reflow
+                  vtam_framework.classList.add('active');
+                });
+                vtam_framework.addEventListener('click', function() {
+                  vtam_framework.classList.remove('active');
+                  vtam_framework.addEventListener('transitionend', function() {
+                    vtam_framework.style.display = 'none';
+                  }, { once: true });
+                });
+              </script>
+            </td>
+            <td style="padding:8px;width:75%;vertical-align:middle">
+              <a href="https://plan-lab.github.io/projects/vtam/">
+              <span class="papertitle">VTAM: Video-Tactile-Action Models for Complex Physical Interaction Beyond VLAs</span>
+              </a>
+              <br>
+              Haoran Yuan<sup>*</sup>,
+              Weigang Yi<sup>*</sup>,
+              Zhenyu Zhang<sup>*</sup>,
+              <strong>Wendi Chen<sup>*</sup></strong>,
+              Yuchen Mo,
+              Jiashi Yin,
+              Xinzhuo Li,
+              Xiangyu Zeng,
+              <a href="https://alvinwen428.github.io">Chuan Wen</a>,
+              <a href="https://www.mvig.org">Cewu Lu</a>,
+              <a href="https://ece.illinois.edu/about/directory/faculty/krdc">Katherine Driggs-Campbell</a>,
+              <a href="https://isminoula.github.io">Ismini Lourentzou</a>
+              (<sup>*</sup>equal contributions)
+              <br>
+              <em>arXiv preprint</em>, 2026
+              <br>
+              <a href="https://plan-lab.github.io/projects/vtam/">project page</a>
+              /
+              <a href="https://arxiv.org/pdf/2603.23481">paper</a>
+              /
+              <a href="https://arxiv.org/abs/2603.23481">arXiv</a>
+              /
+              <a href="https://github.com/haorany7/VTAM">code</a>
+              /
+              <a href="data/bibtex/VTAM.bib">bibtex</a>
+              <p></p>
+              <p>
+                VTAM extends video action models with tactile perception for contact-rich manipulation.
+                By introducing lightweight modality transfer finetuning and tactile regularization, it enables more robust multimodal fusion and substantially improves performance in complex physical interactions beyond vision-only policies.
+              </p>
+            </td>
+          </tr>
+
           <!-- RoboPocket -->
           <tr bgcolor="#ffffd0">
             <td style="padding:16px;width:25%;vertical-align:middle">
@@ -199,7 +334,9 @@
               <a href="https://www.mvig.org">Cewu Lu</a><sup>\( \dagger \)</sup>
               (<sup>\( \dagger \)</sup>corresponding authors)
               <br>
-              <em>arXiv preprint</em>, 2025
+              <em>Robotics and Automation Letters (<strong>RA-L</strong>)</em>, 2026
+              <br>
+              <strong style="color: red;">🔥Outstanding Paper Award <a href="https://sense-of-space.github.io">@ SoS Workshop in CVPR 2026</a></strong>
               <br>
               <a href="https://implicit-rdp.github.io/">project page</a>
               /
