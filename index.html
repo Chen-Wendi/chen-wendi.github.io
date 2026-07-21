@@ -64,6 +64,7 @@
             <td style="padding:16px;width:100%;vertical-align:middle">
               <h2>News</h2>
               <ul>
+                <li><span style="color: gray">[Jul. 2026]</span> We propose <a href="https://lift-policy.github.io"><strong>LIFT</strong></a>, which accelerates VLA post-training through reactive force injection.</li>
                 <li><span style="color: gray">[Jun. 2026]</span> <a href="https://implicit-rdp.github.io/"><strong>ImplicitRDP</strong></a> is accepted to RA-L 2026 and receives the <strong style="color: red;">Outstanding Paper Award</strong> at the <a href="https://sense-of-space.github.io">SoS Workshop</a> at CVPR 2026! 🎉🔥</li>
                 <li><span style="color: gray">[Mar. 2026]</span> We propose <a href="https://plan-lab.github.io/projects/vtam/"><strong>VTAM</strong></a>, which brings tactile perception into video action models for contact-rich manipulation.</li>
                 <li><span style="color: gray">[Mar. 2026]</span> We propose <a href="https://robo-pocket.github.io"><strong>RoboPocket</strong></a>, a system that realizes robot-free instant policy iteration in the wild.</li>
@@ -94,6 +95,70 @@
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
+          <!-- LIFT -->
+          <tr bgcolor="#ffffd0">
+            <td style="padding:16px;width:25%;vertical-align:middle">
+              <div>
+                <div class="clickable" id="LIFT-gif-container">
+                  <img src='images/LIFT.gif' alt="GIF of LIFT Demos" width="160">
+                  <div class="overlay-text">click to view the teaser</div>
+                </div>
+                <div class="fullscreen-container" id="LIFT-framework-container">
+                  <img src='images/LIFT.png' alt="LIFT Teaser" width="100%">
+                </div>
+              <script type="text/javascript">
+                lift_gif = document.getElementById('LIFT-gif-container');
+                lift_framework = document.getElementById('LIFT-framework-container');
+                lift_gif.addEventListener('click', function() {
+                  lift_framework.style.display = 'flex';
+                  lift_framework.offsetHeight; // trigger reflow
+                  lift_framework.classList.add('active');
+                });
+                lift_framework.addEventListener('click', function() {
+                  lift_framework.classList.remove('active');
+                  lift_framework.addEventListener('transitionend', function() {
+                    lift_framework.style.display = 'none';
+                  }, { once: true });
+                });
+              </script>
+              </div>
+            </td>
+            <td style="padding:8px;width:75%;vertical-align:middle">
+              <a href="https://lift-policy.github.io">
+              <span class="papertitle">Never Too Late for Force: Accelerating VLA Post-Training with Reactive Force Injection</span>
+              </a>
+              <br>
+              <a href="https://y-wng.github.io">Yi Wang</a><sup>*</sup>,
+              <strong>Wendi Chen</strong><sup>*\( \dagger \)</sup>,
+              <a href="https://github.com/nssmd">Zimo Wen</a><sup>*</sup>,
+              <a href="https://hanxue.me">Han Xue</a>,
+              Xueqi Li,
+              <a href="https://virlus.github.io">Wenye Yu</a>,
+              Zhijie Chen,
+              Hao Yang,
+              <a href="https://lyuj1998.github.io">Jun Lv</a>,
+              <a href="https://alvinwen428.github.io">Chuan Wen</a><sup>\( \ddagger \)</sup>,
+              <a href="https://www.mvig.org">Cewu Lu</a><sup>\( \ddagger \)</sup>
+              (<sup>*</sup>equal contributions, <sup>\( \dagger \)</sup>project lead, <sup>\( \ddagger \)</sup>corresponding authors)
+              <br>
+              <em>arXiv preprint</em>, 2026
+              <br>
+              <a href="https://lift-policy.github.io">project page</a>
+              /
+              <a href="https://arxiv.org/pdf/2607.14236">paper</a>
+              /
+              <a href="https://arxiv.org/abs/2607.14236">arXiv</a>
+              /
+              <a href="data/bibtex/LIFT.bib">bibtex</a>
+              <p></p>
+              <p>
+                LIFT adds force through prior-preserving reactive force injection, grafting a reactive action expert onto a pretrained VLA.
+                It encodes recent 6D end-effector force as causal memory and refreshes actions within each execution chunk.
+                Combined with online DAgger corrections, LIFT learns faster and achieves stronger contact-rich performance than vision-only post-training.
+              </p>
+            </td>
+          </tr>
+
           <!-- FTP-1 -->
           <tr>
             <td style="padding:16px;width:25%;vertical-align:middle">
@@ -130,7 +195,7 @@
               <a href="https://victkk.github.io">Zicheng Zhang</a><sup>*</sup>,
               <a href="https://openreview.net/profile?id=%7EMingjie_Zhou2">Mingjie Zhou</a><sup>*</sup>,
               <strong>Wendi Chen</strong>,
-              <a href="https://openreview.net/profile?id=~Yi_Wang115">Yi Wang</a>,
+              <a href="https://y-wng.github.io">Yi Wang</a>,
               <a href="https://zhuoyang-liu.github.io">Zhuoyang Liu</a>,
               <a href="https://dantong88.github.io">Dantong Niu</a>,
               <a href="https://scholar.google.com/citations?user=IZB5CEMAAAAJ&hl=zh-CN">Shuo Wang</a>,
@@ -264,7 +329,7 @@
               <a href="https://hanxue.me">Han Xue</a><sup>*\( \dagger \)</sup>,
               <a href="https://uimicro.com">Fangyuan Zhou</a><sup>*</sup>,
               Tian Le,
-              Yi Wang,
+              <a href="https://y-wng.github.io">Yi Wang</a>,
               Yuting Zhang,
               <a href="https://lyuj1998.github.io">Jun Lv</a>,
               <a href="https://alvinwen428.github.io">Chuan Wen</a><sup>\( \ddagger \)</sup>,
@@ -325,8 +390,8 @@
               <br>
               <strong>Wendi Chen</strong>,
               <a href="https://hanxue.me">Han Xue</a>,
-              Yi Wang,
-              <a href="https://uimicro.com/">Fangyuan Zhou</a>,
+              <a href="https://y-wng.github.io">Yi Wang</a>,
+              <a href="https://uimicro.com">Fangyuan Zhou</a>,
               <a href="https://lyuj1998.github.io">Jun Lv</a>,
               <a href="https://github.com/EricJin2002">Yang Jin</a>,
               Shirun Tang,
@@ -639,7 +704,7 @@
               <br>
               <strong>Wendi Chen<sup>*</sup></strong>,
               <a href="https://hanxue.me">Han Xue</a><sup>*</sup>,
-              <a href="https://uimicro.com/">Fangyuan Zhou</a>,
+              <a href="https://uimicro.com">Fangyuan Zhou</a>,
               Yuan Fang,
               <a href="https://www.mvig.org">Cewu Lu</a>
               (<sup>*</sup>equal contributions)
