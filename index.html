@@ -64,6 +64,7 @@
             <td style="padding:16px;width:100%;vertical-align:middle">
               <h2>News</h2>
               <ul>
+                <li><span style="color: gray">[Jul. 2026]</span> We propose <a href="https://fa-rdp.github.io"><strong>FA-RDP</strong></a>, a frequency-adaptive reactive diffusion policy for contact-rich manipulation.</li>
                 <li><span style="color: gray">[Jul. 2026]</span> We propose <a href="https://lift-policy.github.io"><strong>LIFT</strong></a>, which accelerates VLA post-training through reactive force injection.</li>
                 <li><span style="color: gray">[Jun. 2026]</span> <a href="https://implicit-rdp.github.io/"><strong>ImplicitRDP</strong></a> is accepted to RA-L 2026 and receives the <strong style="color: red;">Outstanding Paper Award</strong> at the <a href="https://sense-of-space.github.io">SoS Workshop</a> at CVPR 2026! 🎉🔥</li>
                 <li><span style="color: gray">[Mar. 2026]</span> We propose <a href="https://plan-lab.github.io/projects/vtam/"><strong>VTAM</strong></a>, which brings tactile perception into video action models for contact-rich manipulation.</li>
@@ -95,6 +96,65 @@
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
+          <!-- FA-RDP -->
+          <tr bgcolor="#ffffd0">
+            <td style="padding:16px;width:25%;vertical-align:middle">
+              <div>
+                <div class="clickable" id="FA-RDP-gif-container">
+                  <img src='images/FA-RDP.gif' alt="GIF of FA-RDP Demos" width="160">
+                  <div class="overlay-text">click to view the teaser</div>
+                </div>
+                <div class="fullscreen-container" id="FA-RDP-framework-container">
+                  <img src='images/FA-RDP.png' alt="FA-RDP Teaser" width="100%">
+                </div>
+              <script type="text/javascript">
+                fa_rdp_gif = document.getElementById('FA-RDP-gif-container');
+                fa_rdp_framework = document.getElementById('FA-RDP-framework-container');
+                fa_rdp_gif.addEventListener('click', function() {
+                  fa_rdp_framework.style.display = 'flex';
+                  fa_rdp_framework.offsetHeight; // trigger reflow
+                  fa_rdp_framework.classList.add('active');
+                });
+                fa_rdp_framework.addEventListener('click', function() {
+                  fa_rdp_framework.classList.remove('active');
+                  fa_rdp_framework.addEventListener('transitionend', function() {
+                    fa_rdp_framework.style.display = 'none';
+                  }, { once: true });
+                });
+              </script>
+              </div>
+            </td>
+            <td style="padding:8px;width:75%;vertical-align:middle">
+              <a href="https://fa-rdp.github.io">
+              <span class="papertitle">FA-RDP: A Frequency-Adaptive Reactive Diffusion Policy for Contact-Rich Manipulation</span>
+              </a>
+              <br>
+              Lifeng Zhuo<sup>*</sup>,
+              <strong>Wendi Chen</strong><sup>*</sup>,
+              <a href="https://hanxue.me">Han Xue</a>,
+              Shirun Tang,
+              <a href="https://lyuj1998.github.io">Jun Lv</a>,
+              <a href="https://www.mvig.org">Cewu Lu</a><sup>\( \dagger \)</sup>,
+              <a href="https://alvinwen428.github.io">Chuan Wen</a><sup>\( \dagger \)</sup>
+              (<sup>*</sup>equal contributions, <sup>\( \dagger \)</sup>corresponding authors)
+              <br>
+              <em>arXiv preprint</em>, 2026
+              <br>
+              <a href="https://fa-rdp.github.io">project page</a>
+              /
+              <a href="https://arxiv.org/pdf/2607.28596">paper</a>
+              /
+              <a href="https://arxiv.org/abs/2607.28596">arXiv</a>
+              /
+              <a href="data/bibtex/FA-RDP.bib">bibtex</a>
+              <p></p>
+              <p>
+                FA-RDP adapts its action frequency to the stage of contact-rich manipulation: it preserves multimodal, low-frequency approaches before contact and switches to fast, one-step force-reactive control after contact.
+                A learned multimodality indicator selects between the samplers, while Manifold Consistency Distillation enables accurate one-step actions on the robot action manifold.
+              </p>
+            </td>
+          </tr>
+
           <!-- LIFT -->
           <tr bgcolor="#ffffd0">
             <td style="padding:16px;width:25%;vertical-align:middle">
